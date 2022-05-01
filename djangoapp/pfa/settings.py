@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'datalands',
         'USER': 'postgres',
-        'HOST': '192.168.75.3',
+        'HOST': 'pgdb',
         'PORT': '5432',
         'PASSWORD': 'mytestdb',
     }

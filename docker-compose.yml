@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  pgdb:
+    image: postgres
+    container_name: pgdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - /opt/pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=mytestdb
+  djapp: 
+    build: ./djangoapp
+    container_name: djapp
+    ports: 
+      - "8000:8000"

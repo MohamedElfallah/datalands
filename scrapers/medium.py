@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import time
 from selenium import webdriver
-import pandas as pd
 import os
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service

@@ -85,9 +85,4 @@ def InsertNewArticles():
 
 # _________main______
 if __name__ == "__main__":
-    while(True):
-        i=1
-        InsertNewArticles()
-        print('processed udemy : ', i)
-        i+=1
-        time.sleep(30)
+    InsertNewArticles()

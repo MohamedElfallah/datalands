@@ -97,9 +97,4 @@ def insert():
 
 
 if __name__ == "__main__":
-    i=1
-    while(True):
-        insert()
-        print("processed medium :", i)
-        i+=1
-        time.sleep(30)
+   insert()

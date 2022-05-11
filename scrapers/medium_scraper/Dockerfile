@@ -1,6 +1,5 @@
 FROM python:3.9.12
-WORKDIR /scrapers
+WORKDIR /udemy_scraper
 COPY . .
 RUN pip install -r requirements.txt
-RUN chmod a+x run.sh
-ENTRYPOINT [ "./run.sh" ]
+CMD ["python", "udemy.py"]

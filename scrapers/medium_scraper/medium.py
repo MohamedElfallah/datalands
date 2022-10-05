@@ -53,10 +53,10 @@ def GetArticles():
 def CheckNewArticles():
     scraped = GetArticles()
     print(len(scraped))
-    connection = psycopg2.connect(host="192.168.75.3", database="datalands",
+    connection = psycopg2.connect(host="", database="datalands",
                                   user="postgres",
                                   port="5432",
-                                  password="mytestdb")
+                                  password="")
     cursor = connection.cursor()
     query = "select title from medium limit 85;"
     cursor.execute(query)
@@ -80,10 +80,10 @@ def insert():
     if number_of_articles == 0:
         return
     else:
-        connection = psycopg2.connect(host="192.168.75.3", database="datalands",
+        connection = psycopg2.connect(host="", database="datalands",
                                       user="postgres",
                                       port="5432",
-                                      password="mytestdb")
+                                      password="")
         cursor = connection.cursor()
         for i in range(number_of_articles):
             query = "insert into medium(title, description, link) values (%s,%s,%s);"

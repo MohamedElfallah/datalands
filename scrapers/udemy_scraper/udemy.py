@@ -37,10 +37,10 @@ def Descr_link(item_link):
 
 # CheckNewArticles():  return new courses that may be added recently in order to insert it to the database
 def CheckNewArticles():
-    connection = psycopg2.connect(host="192.168.75.3", database="datalands",
+    connection = psycopg2.connect(host="", database="datalands",
                                   user="postgres",
                                   port="5432",
-                                  password="mytestdb")
+                                  password="")
     cursor = connection.cursor()
     query = "select title from udemy limit 12;"
     cursor.execute(query)
@@ -67,10 +67,10 @@ def InsertNewArticles():
     if number_of_articles == 0:
         return
     else:
-        connection = psycopg2.connect(host="192.168.75.3", database="datalands",
+        connection = psycopg2.connect(host="", database="datalands",
                                       user="postgres",
                                       port="5432",
-                                      password="mytestdb")
+                                      password="")
         cursor = connection.cursor()
         for i in range(number_of_articles):
             query = "insert into udemy(title, description, link) values (%s,%s,%s);"
